@@ -2,6 +2,7 @@ This program (Financial AllinOne Management) helps users in finance management, 
 
 A UML diagram will help identify all the classes, attributes, and behaviors the program will need.
 
+
 Registering A User
 
 On startup, the user (usually a parent) must register their child's financial details. This includes (but is not necessarily limited to):
@@ -20,6 +21,8 @@ On startup, the user (usually a parent) must register their child's financial de
 
 ●	Their budgets 
 
+
+
 Budget Categories
 
 Each child that is being monitored is assigned the following budget categories. The exact value of each budget is assigned when registering the child as a user.
@@ -31,6 +34,8 @@ Each child that is being monitored is assigned the following budget categories. 
 ●	Eating Out
 
 ●	Miscellaneous
+
+
 
 
 A User Menu
@@ -48,6 +53,8 @@ This takes the user to a sub-menu where they select their budget category and vi
 
 4. View Bank Account Details
 The application prints out the bank account details of the user and all transactions conducted to date alongside the closing balance.
+
+
 
 Record Transactions
 
@@ -75,6 +82,8 @@ Depending on the type of user (more on this in the User Types section below), af
 
 The transactions printed will be the transactions pertaining to the budget category in question. That is, if the user gets a warning that they are about to exceed their budget for "Games and Entertainment", then any transactions belonging to this category will be printed for review.
 
+
+
 Lock Out
 
 The app has the ability to lock a user out of recording transactions (and effectively spending any money) based on certain conditions as specified by their User Type (more on this in the User Types section below).
@@ -85,9 +94,12 @@ If a user has been locked from a budget category:
 
 ●	Any attempt at recording transactions in the affected budget category will be denied.
 
+
+
 User Types
 
 Every family and every child is unique. The F.A.M. recognizes this and supports different types of users. The app provides different moderation levels for each user type.
+
 
 The Angel
 
@@ -100,6 +112,7 @@ This user type:
 ●	Gets politely notified if they exceed a budget category.
 
 ●	Gets a warning if they exceed more than 90% of a budget.
+
 
 The Troublemaker
 
