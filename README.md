@@ -3,21 +3,33 @@ This program (Financial AllinOne Management) helps users in finance management, 
 A UML diagram will help identify all the classes, attributes, and behaviors the program will need.
 
 Registering A User
+
 On startup, the user (usually a parent) must register their child's financial details. This includes (but is not necessarily limited to):
+
 ●	The users name
+
 ●	Age
+
 ●	User Type 
+
 ●	Bank Account number
+
 ●	Bank Name
+
 ●	Bank Balance
+
 ●	Their budgets 
 
 Budget Categories
 
 Each child that is being monitored is assigned the following budget categories. The exact value of each budget is assigned when registering the child as a user.
+
 ●	Games and Entertainment
+
 ●	Clothing and Accessories
+
 ●	Eating Out
+
 ●	Miscellaneous
 
 
@@ -42,16 +54,23 @@ Record Transactions
 The application maintains a collection of transactions which represent money going out of the users bank account. Provides the user an option to enter transaction details.
 
 Each transaction contains the following information:
+
 ●	The timestamp the transaction was recorded (a nicely formatted datetime value).
+
 ●	The dollar amount (positive, non-zero number).
+
 ●	The budget category that this transaction belongs to.
+
     ●	Provides users with a list of categories and prompts users to select one.
+
 ●	The name of the shop/website where the purchase took place.
 
 The user is not allowed to record a transaction if the transaction would cause their bank balance to go below zero. Additionally, the system subtracts the required amount from the users bank balance once a transaction has been recorded.
 
 Depending on the type of user (more on this in the User Types section below), after a transaction has been recorded system will perform checks to see if a warning or notification should be issued. A list of transactions that have taken place in a budget category will be printed out to the console if:
+
 ●	The user receives a warning that they are getting close to exceeding their assigned budget for the category in question
+
 ●	The user receives a notification that they have exceeded their assigned budget for the category in question.
 
 The transactions printed will be the transactions pertaining to the budget category in question. That is, if the user gets a warning that they are about to exceed their budget for "Games and Entertainment", then any transactions belonging to this category will be printed for review.
@@ -61,7 +80,9 @@ Lock Out
 The app has the ability to lock a user out of recording transactions (and effectively spending any money) based on certain conditions as specified by their User Type (more on this in the User Types section below).
 
 If a user has been locked from a budget category:
+
 ●	They will be notified of this via a console message.
+
 ●	Any attempt at recording transactions in the affected budget category will be denied.
 
 User Types
@@ -75,7 +96,9 @@ The Angel represents a user whose parents are not worried at all. This child has
 This user type:
 
 ●	Never gets locked out of a budget category. They can continue spending money even if they exceed the budget in question.
+
 ●	Gets politely notified if they exceed a budget category.
+
 ●	Gets a warning if they exceed more than 90% of a budget.
 
 The Troublemaker
@@ -85,7 +108,9 @@ The Troublemaker represents a user who often finds themselves in trouble. These 
 This user type:
 
 ●	Gets a warning if they exceed more than 75% of a budget category.
+
 ●	Gets politely notified iIf they exceed a budget category.
+
 ●	Gets locked out of conducting transactions in a budget category if they exceed it by 120% of the amount assigned to the budget in question.
 
  
@@ -96,8 +121,11 @@ The Rebel represents a user who refuses to follow any rules. Parents of these ch
 This user type is strictly monitored: 
 
 ●	They get a warning for every transaction after exceeding 50% of a budget. 
+
 ●	Gets ruthlessly notified if they exceed a budget category. 
+
 ●	Gets locked out of conducting transactions in a budget category if they exceed it by 100% of the amount assigned to the budget in question.
+
 ●	If they exceed their budget in 2 or more categories then they get locked out of their account completely
 
 
